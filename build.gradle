@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version "2.11.2"
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    implementation 'com.codeborne:selenide:7.3.1'
+    testImplementation 'io.qameta.allure:allure-java-commons:2.24.0'
+    testImplementation 'org.aspectj:aspectjweaver:1.9.22'
+    testImplementation 'io.qameta.allure:allure-assertj:2.24.0'
+
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
